@@ -15,19 +15,20 @@ function minimumNumber(n, password) {
     reasons.push("Password must be at least 6 characters");
   }
 
-  if (!/\d/.test(password)) {
+  if (!/[0-9]/.test(password)) {
     reasons.push("Password must contain at least one digit");
   }
 
-  if (!/[a-z]/.test(password)) {
-    reasons.push("Password must contain at least one lowercase English character");
-  }
-
   if (!/[A-Z]/.test(password)) {
-    reasons.push("Password must contain at least one uppercase English character");
+    reasons.push("Password must contain at least one uppercase letter");
   }
 
-  if (!/[!@#$%^&*()-+]/.test(password)) {
+  if (!/[a-z]/.test(password)) {
+    reasons.push("Password must contain at least one lowercase letter");
+  }
+
+
+  if (!/[@!#$%^&*()-+]/.test(password)) {
     reasons.push("Password must contain at least one special character (!@#$%^&*()-+)");
   }
 

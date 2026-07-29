@@ -7,6 +7,8 @@
 
 function uniqueArraySum(ar) {
   // TODO: return the sum of unique numbers in the array
+  return [...new Set(ar)].reduce((acc, curValue) => acc + curValue, 0);
+  
 }
 
 module.exports = uniqueArraySum;
